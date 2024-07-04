@@ -65,6 +65,7 @@ WordPlate is a boilerplate for WordPress, built with Composer and designed with 
 Before using WordPlate, make sure you have PHP 8.2 and MySQL 8.0 installed on your computer. You'll also need to have Composer, a package manager for PHP, installed on your computer.
 
 To begin - fork this repo
+run 'composer install at the root in a terminal'
 Create an empty database in phpmyadmin
 Use the 'utf8mb4_unicode_ci' as the encoding
 Supply the details as below in the .env file
