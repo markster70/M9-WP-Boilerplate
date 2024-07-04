@@ -15,9 +15,8 @@ const themeName = process.env.WP_DEFAULT_THEME;
 
 //import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload';
-const fs = require('fs');
+import path from 'path';
 import { defineConfig } from 'vite';
-const { resolve } = require('path');
 
 // vite.config.js
 import vue from '@vitejs/plugin-vue'
@@ -85,7 +84,7 @@ export default defineConfig(({ command, mode }) => {
     },
     resolve: {
       unsafeCache: true,
-      modules: [resolve(__dirname, '/node_modules')],
+      modules: [path.resolve(__dirname, '/node_modules')],
       alias: [
         // when adding/editing make sure to update jsconfig.json
         // so VS Code picks up the paths in intellisense

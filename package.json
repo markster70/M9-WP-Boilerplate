@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "wp-boilerplate",
   "version": "1.0.0",
   "description": "Kimco WP Boilerplate",
@@ -10,11 +11,11 @@
   "devDependencies": {
     "sass": "^1.54.0",
     "terser": "^5.14.2",
-    "vite": "^3.0.3",
-    "vite-plugin-live-reload": "^2.1.0",
+    "vite": "^5.3.3",
+    "vite-plugin-live-reload": "^3.0.3",
     "vite-plugin-imagemin": "^0.6.1",
     "cross-env": "^7.0.3",
-    "@vitejs/plugin-vue" : "^3.0.1"
+    "@vitejs/plugin-vue" : "^5.0.5"
   },
   "dependencies": {
     "dotenv": "^16.4.5"
