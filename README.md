@@ -67,7 +67,7 @@ Before using WordPlate, make sure you have PHP 8.2 and MySQL 8.0 installed on yo
 To install WordPlate, open your terminal and enter the following command:
 
 ```sh
-composer create-project --prefer-dist vinkla/wordplate example-app
+composer create-project --prefer-dist vinkla/wp-boilerplate example-app
 ```
 
 After installing WordPlate, you'll need to update the database credentials in the `.env` file. This file is located in the root directory of your project. Open the file and update the following lines with your database credentials:

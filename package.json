@@ -1,11 +1,25 @@
 {
-  "type": "module",
+  "name": "wp-boilerplate",
+  "version": "1.0.0",
+  "description": "Kimco WP Boilerplate",
+  "main": "index.js",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite"
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "sass": "^1.54.0",
+    "terser": "^5.14.2",
+    "vite": "^3.0.3",
+    "vite-plugin-live-reload": "^2.1.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "cross-env": "^7.0.3",
+    "@vitejs/plugin-vue" : "^3.0.1"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "vite": "^5.3.2"
-  }
+    "dotenv": "^16.4.5"
+  },
+  "author": "Mark P",
+  "license": "ISC"
 }
+

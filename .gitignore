@@ -6,9 +6,14 @@
 !/public/mu-plugins/mu-plugins.php
 /public/plugins/*
 !/public/plugins/index.php
-/public/themes/*/assets
+/public/themes/*/dist
 /public/upgrade
 /public/uploads
 /public/wordpress
 /vendor
 auth.json
+
+
+.idea
+.DS_Store
+composer.lock
