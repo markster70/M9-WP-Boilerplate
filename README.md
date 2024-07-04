@@ -64,11 +64,10 @@ WordPlate is a boilerplate for WordPress, built with Composer and designed with 
 
 Before using WordPlate, make sure you have PHP 8.2 and MySQL 8.0 installed on your computer. You'll also need to have Composer, a package manager for PHP, installed on your computer.
 
-To install WordPlate, open your terminal and enter the following command:
-
-```sh
-composer create-project --prefer-dist vinkla/wp-boilerplate example-app
-```
+To begin - fork this repo
+Create an empty database in phpmyadmin
+Use the 'utf8mb4_unicode_ci' as the encoding
+Supply the details as below in the .env file
 
 After installing WordPlate, you'll need to update the database credentials in the `.env` file. This file is located in the root directory of your project. Open the file and update the following lines with your database credentials:
 
@@ -78,16 +77,17 @@ DB_USER=username
 DB_PASSWORD=password
 ```
 
-To run your WordPlate application, you may serve it using PHP's built-in web server. Open your terminal and navigate to the `public` directory of your project. Then, enter the following command:
+You will also need to configure these lines in .env
+Set them to the desired theme name ( you also need to rename the theme folder)
+THE WP_LOCAL_DEV_PATH is set to the URL that you choose in MAMP / WAMP / XAMMP
 
-```sh
-php -S 127.0.0.1:8000 -t public/
+```env
+WP_DEFAULT_THEME=wp-boilerplate
+WP_LOCAL_DEV_PATH=http://wpbptest.local:8888/
 ```
 
-Finally, open your web browser and visit the following URLs to view your WordPlate application:
 
-- [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/) - Your website
-- [`http://127.0.0.1:8000/wordpress/wp-admin`](http://127.0.0.1:8000/wordpress/wp-admin) - The dashboard
+To run your WP install - add the site to MAMP / WAMP / XAMMP - setting the root directory as /public
 
 ## Configuration
 
