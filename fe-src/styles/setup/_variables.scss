@@ -1,2 +1,5 @@
 // font vars
-$font-path : "/fonts" !default;
+
+$font-path : "@@staticAssetPath/fonts" !default;
+
+//$font-path : "/themes/wp-boilerplate/dist/fonts" !default;
