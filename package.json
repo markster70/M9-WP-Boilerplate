@@ -9,18 +9,18 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "cross-env": "^7.0.3",
     "sass": "^1.54.0",
     "terser": "^5.14.2",
     "vite": "^5.3.3",
-    "vite-plugin-live-reload": "^3.0.3",
     "vite-plugin-imagemin": "^0.6.1",
-    "cross-env": "^7.0.3",
-    "@vitejs/plugin-vue" : "^5.0.5"
+    "vite-plugin-live-reload": "^3.0.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "vue": "^3.4.31"
   },
   "author": "Mark P",
   "license": "ISC"
 }
-
