@@ -87,6 +87,9 @@ WP_DEFAULT_THEME=wp-boilerplate
 WP_LOCAL_DEV_PATH=http://wpbptest.local:8888/
 ```
 
+Also set the SALTS in the .env file using this random generator
+
+https://vinkla.github.io/salts/
 
 To run your WP install - add the site to MAMP / WAMP / XAMMP - setting the root directory as /public
 
@@ -118,6 +121,7 @@ To learn more about managing environment variables in WordPlate, you can refer t
 It's important to add salt keys to your environment file. These keys are used to encrypt sensitive data, such as user sessions, and help to ensure the security of your application.
 
 If you don't set the salt keys, your user sessions and other encrypted data may be vulnerable to attacks. To make it easier to generate secure salt keys, we've created a [salt key generator](https://vinkla.github.io/salts/) that you can use. If you haven't already done so, copy the `.env.example` file to a new file named `.env`. Then visit the generator and copy the randomly generated keys to your `.env` file.
+
 
 ## Plugins
 
