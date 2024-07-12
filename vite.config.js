@@ -93,7 +93,7 @@ export default defineConfig(({ command, mode }) => {
         // so VS Code picks up the paths in intellisense
         // Alis usage example below
         { find: '@js', replacement: '/fe-src/js' },
-        {find : '@@staticAssetPath', replacement :  process.env.NODE_ENV === 'development' ? `${servrRoot}/themes/${themeName}/dist/` : `/`,}
+        {find : '@@staticAssetPath', replacement :  process.env.NODE_ENV === 'development' ? `${servrRoot}/themes/${themeName}/dist/` : `/`}
       ],
     },
   }
