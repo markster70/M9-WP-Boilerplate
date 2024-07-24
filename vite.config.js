@@ -22,13 +22,13 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue'
 
 
-const servrRoot = path.resolve(__dirname);
+const serverRoot = path.resolve(__dirname);
 
 
 export default defineConfig(({ command, mode }) => {
   return {
     root: '',
-    base: process.env.NODE_ENV === 'development' ? `` : `/themes/${themeName}/dist/`,
+    base: process.env.NODE_ENV === 'development' ? `` : `/wp-content/themes/${themeName}/dist/`,
     publicDir: 'fe-src/static',
     plugins:[liveReload([__dirname + '/**/*.php'], vue())],
     build: {
@@ -93,7 +93,7 @@ export default defineConfig(({ command, mode }) => {
         // so VS Code picks up the paths in intellisense
         // Alis usage example below
         { find: '@js', replacement: '/fe-src/js' },
-        {find : '@@staticAssetPath', replacement :  process.env.NODE_ENV === 'development' ? `${servrRoot}/themes/${themeName}/dist/` : `/`}
+        {find : '@@staticAssetPath', replacement :  process.env.NODE_ENV === 'development' ? `${serverRoot}/themes/${themeName}/dist/` : `/`}
       ],
     },
   }

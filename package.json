@@ -18,7 +18,10 @@
     "vite-plugin-live-reload": "^3.0.3"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "aos": "^3.0.0-beta.6",
     "dotenv": "^16.4.5",
+    "gsap": "^3.12.5",
     "vue": "^3.4.31"
   },
   "author": "Mark P",

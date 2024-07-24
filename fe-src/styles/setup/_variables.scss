@@ -2,4 +2,41 @@
 
 $font-path : "@@staticAssetPath/fonts" !default;
 
+$image-path : "@@staticAssetPath/images" !default;
+
 //$font-path : "/themes/wp-boilerplate/dist/fonts" !default;
+
+
+// Spacing
+
+$spacing-val-sm : 0.5;
+$spacing-val-md : 1;
+$spacing-val-lg : 2;
+$spacing-val-xl : 4;
+$spacing-val-xxl : 8;
+
+$spacer-sm : #{$spacing-val-sm}rem;
+$spacer-md : #{$spacing-val-md}rem;
+$spacer-lg : #{$spacing-val-lg}rem;
+$spacer-xl : #{$spacing-val-xl}rem;
+$spacer-xxl : #{$spacing-val-xxl}rem;
+
+// Containers
+$min-clamp-width: 480;
+$container-width : 1440;
+$content-width : 1200;
+
+$container-width-px : #{$container-width}px;
+$content-width-px : #{$content-width}px;
+
+:root {
+  --container-width: #{$container-width-px};
+  --content-width: #{$content-width-px};
+  --container-inner-padding: #{$spacer-lg};
+  --container-padding-top: #{$spacer-xl};
+  --container-padding-bottom: #{$spacer-xl};
+  --btn-border-radius: 30px;
+  --btn-outline-width: 3px;
+}
+
+

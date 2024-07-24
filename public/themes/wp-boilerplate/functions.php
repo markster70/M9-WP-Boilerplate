@@ -73,3 +73,33 @@ add_action('wp_dashboard_setup', function () {
     remove_meta_box('dashboard_primary', 'dashboard', 'side'); // WordPress Events and News
     remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Quick Draft
 });
+
+// needs to be setup for each build
+function override_MCE_options($init)
+{
+    // Define custom colors with their corresponding HEX codes and names
+    // see map of css vars in comment above
+    $custom_colors = '
+        "ffffff", "White",
+        "000000", "Black",
+        "E879F9", "Bright Purple",
+        "820069", "Dark Purple",
+        "12D8D", " Light Purple",
+        "F0ABFC", "Extra Light Purple",
+        "0284C7", "Light Blue",
+        "334155", "Dark Steel",
+        "475569", "Light Steel",
+        "EFEFEF", "Light Grey",
+    ';
+
+    // Build the color grid palette using custom colors
+    $init['textcolor_map'] = '[' . $custom_colors . ']';
+
+    // Change the number of rows in the color grid (1 row in this case)
+    $init['textcolor_rows'] = 1;
+
+    return $init;
+}
+
+// Add a filter to apply the custom color settings
+add_filter('tiny_mce_before_init', 'override_MCE_options');
