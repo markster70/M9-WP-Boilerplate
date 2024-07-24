@@ -4,7 +4,7 @@
 /public/languages
 /public/mu-plugins/*
 !/public/mu-plugins/mu-require.php
-!/public/mu-plugins/mu-loader/*
+!/public/mu-plugins/mu-loader
 /public/plugins/*
 !/public/plugins/index.php
 /public/themes/*/dist
