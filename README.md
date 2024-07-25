@@ -85,8 +85,12 @@ They will be referenced in the css correctly via rollup / node aliases.
 
 ### JS Setup
 
-A base JS setup is in place for you to use - this has a dom selector library, tools for debouncing, adding / removing / checking for classes
-There are some commonly used scripts in thr ui-scripts folder
+- A base JS setup is in place for you to use - this has a DOM selector library, tools for debouncing, adding / removing / checking for classes
+
+- There are some commonly used scripts in thr ui-scripts folder
+
+Please take a look through the utility scripts directory and make use of those for consistency
+
 If you need to write new JS, please add to the appropriate folder and create a module / function for
 each - we try to keep JS modular and with separation of concerns.
 Functions can be run on either dom ready or load events - defer if not critical for dom ready
@@ -134,7 +138,7 @@ FE-Assets for deployment - we compile to a dist folder - anything in the static 
 file and js file. 
 
 Updraft is a great migration / copying tool - BEST NOT TO MIGRATE OR INCLUDE THE THEME THOUGH - THATS UNDER
-SOURCE CONTROL HERE. 
+SOURCE CONTROL IN YOUR REPO. 
 
 ## THAT'S THE LOT - HAPPY BUILDING!
 
