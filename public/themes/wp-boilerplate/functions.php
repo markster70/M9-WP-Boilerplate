@@ -103,3 +103,32 @@ function override_MCE_options($init)
 
 // Add a filter to apply the custom color settings
 add_filter('tiny_mce_before_init', 'override_MCE_options');
+
+// MOVE ANY SCRIPTS TO FOOTER
+add_action('init', function () {
+    remove_action('wp_head', 'wp_print_scripts');
+    remove_action('wp_head', 'wp_print_head_scripts', 9);
+    //add_action('wp_footer', 'prnt_emoji_detection_script', 5);
+    add_action('wp_footer', 'wp_print_scripts', 5);
+    add_action('wp_footer', 'wp_print_head_scripts', 5);
+});
+
+// REMOVING SUPERFLUOUS SCRIPTS AND CSS HERE
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+add_action( 'wp_enqueue_scripts', function() {
+    wp_dequeue_style( 'classic-theme-styles' );
+}, 20 );
+
+function remove_wp_block_library_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
+}
+add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
+
+/*  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9 */
+function remove_global_wp_styles_css(){
+    wp_dequeue_style( 'global-styles' );
+}
+add_action( 'wp_enqueue_scripts', 'remove_global_wp_styles_css', 100 );
