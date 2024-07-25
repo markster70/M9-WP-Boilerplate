@@ -5,10 +5,10 @@ dev environments
 
 ### Dependencies
 
-PHP 8.1 +
-MAMP / WAMP 
-NONE / NPM
-Composer
+- PHP 8.1 +
+- MAMP / WAMP 
+- NODE / NPM
+- Composer
 
 ### How to Create a project from this repository
 
