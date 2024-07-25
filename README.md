@@ -22,7 +22,7 @@ Once you have created a new repo, you can then clone the new repo down to your m
 
 - run 'composer install at the root in terminal'
 - run 'npm install at the root in terminal'
-- Create an empty database in phpmyadmin via MAP / WAMP - Use the 'utf8mb4_unicode_ci' as the encoding
+- Create an empty database in phpmyadmin via MAMP / WAMP - Use 'utf8mb4_unicode_ci' as the encoding
 - Add a user for that database with full privileges to the newly created database. Use strong passwords.
 - Set up your local dev site in MAMP / WAMP - the root directory needs to be the 'public' directory of this repo
 - Find the theme directory in this boilerplate - named 'wp-boilerplate' - rename it to something relevant for your project
@@ -44,8 +44,9 @@ DB_TABLE_PREFIX=wp_
 ```
 
 You will also need to configure these lines in .env
-Set them to the desired theme name that you renamed the theme folder to in earlier steps
-THE WP_LOCAL_DEV_PATH is set to the URL that you chose in MAMP / WAMP / XAMMP
+
+- Set WP_DEFAULT_THEME to the theme name that you renamed the theme folder to in earlier steps
+- THE WP_LOCAL_DEV_PATH is set to the URL that you chose in MAMP / WAMP / XAMMP
 
 ```env
 WP_DEFAULT_THEME=wp-boilerplate
@@ -58,7 +59,7 @@ https://vinkla.github.io/salts/
 
 ## DEV / Build Setup Guidance
 
-There are a few steps you may wish to take to tailor the build to your project
+ #### There are a few steps you may wish to take to tailor the build to your project :
 
 - Change the theme details in style.css
 - Add a different 'screenshot.png'
@@ -66,19 +67,21 @@ There are a few steps you may wish to take to tailor the build to your project
 ### USE Branches
 
 Feature branch with GIT - it's a good approach to avoid having to unpick work and 
-minimising conflicts in multi developer teams
+minimising conflicts in multi developer teams.
 
 ### SCSS Setup
 
-Setup your theme colours in _colors.scss
-Setup your variables in _variables.scss - recommend to use css vars, or scss vars then interpolated into css vars
-Take a look at the heading font sizes in base
-Take a look at the pre-defined spacing vars
-
+- Setup your theme colours in _colors.scss
+- Setup your variables in _variables.scss - recommend to use css vars, or scss vars then interpolated into css vars
+- Take a look at the heading font sizes in base
+- Take a moment to look at the mixins and functions available - please use them for consistency
+- Take a look at the pre-defined spacing vars
 
 ### Static Assets
 
-Fonts and Static Images can be added in /fe-src/static
+Fonts and Static Images can be added in /fe-src/static.
+
+They will be referenced in the css correctly via rollup / node aliases.
 
 ### JS Setup
 
@@ -91,9 +94,11 @@ Functions can be run on either dom ready or load events - defer if not critical 
 ### Build Tool
 
 Vite is in place to build out and develop with - the config is in vite.config.js - This should not need
-to be changed. HMR is working for fe code and any php changes you make
+to be changed. 
 
-You may need to run npm run build to get static assets across into build folder
+HMR is working for F-E code and any PHP changes you make.
+
+You may need to run npm run build to get static assets across into build folder.
 
 ### Wordpress Specifics
 
@@ -103,14 +108,14 @@ The following are installed as MU plugins :
 - Classic Editor
 - Updraft Plus ( for cloning  / WP instance copying)
 
-You will need to add a licence key for ACF Pro if you wish to have pro features within the plugin after install
+You will need to add a licence key for ACF Pro if you wish to have pro features within the plugin after install.
 
 Flexible content blocks are generally what we use for projects. We have left this repo as unopinionated as possible for 
-pre defined fields. There are just a couple of global fields that we use as clones for component options as we build out
+pre-defined fields. There are just a couple of global fields that we use as clones for component options as we build out.
 
-There are some sensible defaults in functions.php including nav menus, custom thumbnails and custom logo
+There are some sensible defaults in functions.php including nav menus, custom thumbnails and custom logo.
 
-We also remove a lot of the extra css WP adds for blocks / emojis etc
+We also remove a lot of the extra css WP adds for blocks / emojis etc.
 
 SVG upload to media library is supported via a custom function. 
 
