@@ -123,6 +123,10 @@ We also remove a lot of the extra css WP adds for blocks / emojis etc.
 
 SVG upload to media library is supported via a custom function. 
 
+Tiny MCE has the custom colours restricted in a function named override_MCE_options
+This is so we can provide a colour picker within a wysiwyg with just brand defined
+colours for text. Adjust the $custom_colors var to suit the theme you are working on  ( or remove that function if you need to )
+
 ### Theme Conventions
 
 Put any components partials in the components folder
