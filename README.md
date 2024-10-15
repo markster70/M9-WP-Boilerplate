@@ -107,7 +107,9 @@ You may need to run npm run build to get static assets across into build folder.
 
 ### Wordpress Specifics
 
-The following are installed as MU plugins :
+The following are installed as plugins :
+
+#### We install in standard plugin directory so that the WP update repo can flag plugin updates
 
 - ACF Pro
 - Classic Editor
@@ -115,7 +117,7 @@ The following are installed as MU plugins :
 
 You will need to add a licence key for ACF Pro if you wish to have pro features within the plugin after install.
 
-Flexible content blocks are generally what we use for projects. We have left this repo as unopinionated as possible for 
+Flexible content blocks are generally what we use for projects. We have left this repo as un-opinionated as possible for 
 pre-defined fields. There are just a couple of global fields that we use as clones for component options as we build out.
 
 There are some sensible defaults in functions.php including nav menus, custom thumbnails and custom logo.
