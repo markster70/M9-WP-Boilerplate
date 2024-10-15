@@ -55,15 +55,16 @@
     "extra": {
         "installer-paths": {
             "public/mu-plugins/{$name}": [
-                "type:wordpress-muplugin",
-                "wpengine/advanced-custom-fields-pro",
-                "type:wordpress-muplugin",
-                "wpackagist-plugin/updraftplus",
-                "type:wordpress-muplugin",
-                "wpackagist-plugin/classic-editor"
+                "type:wordpress-muplugin"
             ],
             "public/plugins/{$name}": [
-                "type:wordpress-plugin"
+                "type:wordpress-plugin",
+                "wpengine/advanced-custom-fields-pro",
+                "type:wordpress-plugin",
+                "wpackagist-plugin/updraftplus",
+                "type:wordpress-plugin",
+                "wpackagist-plugin/classic-editor"
+
             ],
             "public/themes/{$name}": [
                 "type:wordpress-theme"
