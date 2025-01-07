@@ -1,4 +1,4 @@
-## Kimco WP Boilerplate 
+## WP Boilerplate - M9 Digital
 
 This is a boilerplate based on Vinka's Wordplate Repo. We use this to spin up full Wordpress based
 dev environments
