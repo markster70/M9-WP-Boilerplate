@@ -87,9 +87,9 @@ minimising conflicts in multi developer teams.
 
 - Setup your theme colours in _colors.scss
 - Setup your variables in _variables.scss - recommend to use css vars, or scss vars then interpolated into css vars
-- Take a look at the heading font sizes in base
-- Take a moment to look at the mixins and functions available - please use them for consistency
-- Take a look at the pre-defined spacing vars
+- Take a look at the heading font sizes in the typography partial
+- Take a moment to look at the mixins and functions available - use them as you wish, or add others
+- Take a look at the pre-defined spacing vars - choose whether to include that partial
 - -
 
 ### Static Assets
@@ -117,7 +117,7 @@ to be changed.
 
 HMR is working for F-E code and any PHP changes you make.
 
-You may need to run npm run build to get static assets across into build folder.
+You will need to run npm run build to get static assets across into build folder.
 
 ### Wordpress Specifics
 
