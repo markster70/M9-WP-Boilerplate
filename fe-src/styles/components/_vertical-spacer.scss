@@ -1,0 +1,9 @@
+.vertical-spacer {
+  margin: $spacer-lg 0;
+
+  @include breakpoint($bp-l) {
+    margin: $spacer-xl 0;
+  }
+  width: 100%;
+  line-height: 0;
+}

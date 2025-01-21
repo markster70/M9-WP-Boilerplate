@@ -1,0 +1,108 @@
+{
+  "key": "group_678f90ab728aa",
+  "title": "Page Components",
+  "fields": [
+    {
+      "key": "field_678f90ab69f04",
+      "label": "Flexible Content",
+      "name": "flexible_content",
+      "aria-label": "",
+      "type": "flexible_content",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layouts": {
+        "layout_678f91446b8fe": {
+          "key": "layout_678f91446b8fe",
+          "name": "text-block",
+          "label": "Text Block",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_678f91556b900",
+              "label": "Text Block Heading",
+              "name": "text_block_heading",
+              "aria-label": "",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "maxlength": "",
+              "allow_in_bindings": 0,
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_678f91606b901",
+              "label": "Text Block Content",
+              "name": "text_block_content",
+              "aria-label": "",
+              "type": "wysiwyg",
+              "instructions": "",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "allow_in_bindings": 0,
+              "tabs": "all",
+              "toolbar": "full",
+              "media_upload": 0,
+              "delay": 0
+            }
+          ],
+          "min": "",
+          "max": ""
+        },
+        "layout_678f969e2df7d": {
+          "key": "layout_678f969e2df7d",
+          "name": "vertical-spacer",
+          "label": "Vertical Spacer",
+          "display": "block",
+          "sub_fields": [],
+          "min": "",
+          "max": ""
+        }
+      },
+      "min": "",
+      "max": "",
+      "button_label": "Add Row"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content"
+  ],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1737463521
+}

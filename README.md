@@ -129,10 +129,16 @@ The following are installed as plugins :
 - Classic Editor
 - Updraft Plus ( for cloning  / WP instance copying)
 
+### Activate the plugins after install
+
 You will need to add a licence key for ACF Pro if you wish to have pro features within the plugin after install.
 
 Flexible content blocks are generally what we use for projects. We have left this repo as un-opinionated as possible for 
-pre-defined fields. There are just a couple of global fields that we use as clones for component options as we build out.
+pre-defined fields.
+
+There is a sample component named text-block added for your use, and well as some global acf field that I use to clone to other components
+You will need to sync the ACF fields once ACF pro is installed to get those.
+#### Note the use of the acf-json folder for better performance and version control of ACF work
 
 There are some sensible defaults in functions.php including nav menus, custom thumbnails and custom logo.
 
