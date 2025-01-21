@@ -1,6 +1,5 @@
-// We import the 2 main stylesheets here for Vite
+// We import the  main stylesheet here for Vite
 import '../styles/base-styles.scss';
-
 
 // dependency imports
 

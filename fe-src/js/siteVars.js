@@ -4,12 +4,12 @@
 // There are also properties for whether the current state is small screen, user preferring reduced motion
 // and abstractions for media queries to be used with GSAP / Scroll Trigger
 const uiStateObj = {
-    smallScreenCategories: ['sm', 'md', 'lg'],
-    largeScreenCategories: ['xl', 'xxl', 'massive'],
+    smallScreenCategories: ['sm', 'md'],
+    largeScreenCategories: ['lg', 'xl', 'xxl', 'massive'],
     isSmallScreen: false,
     prefersReducedMotion: false,
-    scrollTriggerMediaMatch: '(min-width: 992px)',
-    scrollTriggerSmallScreenMediaMatch: '(max-width: 991px)'
+    scrollTriggerMediaMatch: '(min-width: 1025px)',
+    scrollTriggerSmallScreenMediaMatch: '(max-width: 1024px)'
 };
 
 export { uiStateObj };
