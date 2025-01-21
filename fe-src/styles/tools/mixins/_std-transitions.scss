@@ -1,0 +1,7 @@
+@mixin std-transitions($property:all, $speed: 300ms, $ease: ease 0s) {
+
+  -webkit-transition: $property $speed $ease;
+  -moz-transition: $property $speed $ease;
+  -o-transition: $property $speed $ease;
+  transition: $property $speed $ease;
+}

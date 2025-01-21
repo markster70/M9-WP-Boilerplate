@@ -2,6 +2,10 @@
 @import 'mixins/borders';
 @import 'mixins/breakpoints';
 @import 'mixins/links';
+@import "mixins/std-transitions";
+@import "mixins/list-reset";
+@import "mixins/button-reset";
+@import "mixins/hover-mouse";
 
 // Custom functions
 @import 'functions/tint-and-shade';

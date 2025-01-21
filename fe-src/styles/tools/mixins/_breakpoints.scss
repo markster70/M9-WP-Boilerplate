@@ -1,6 +1,5 @@
 @use "sass:math";
 
-
 @mixin breakpoint($bp, $min-max: min-width) {
   $em: math.div($bp,$base-font-size);
   @media(#{$min-max}: #{$em}em) { @content; }
