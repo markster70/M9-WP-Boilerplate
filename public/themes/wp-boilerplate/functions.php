@@ -9,6 +9,7 @@ require 'dev-includes/setup-vite.php';
 
 // Register theme defaults.
 add_action('after_setup_theme', function () {
+    add_theme_support( 'title-tag' );
     add_theme_support('menus');
     add_theme_support('post-thumbnails');
     add_theme_support('custom-logo',
@@ -24,16 +25,20 @@ add_action('after_setup_theme', function () {
 });
 
 /* ----------------------------------- */
-// CUSTOM THEME SETTINGS
+// MENUS SETUP
 /* ----------------------------------- */
 
-//customise register to add additional theme settings
-add_action('customize_register', 'theme_customize_register');
-
-//custom theme settings
-function theme_customize_register($wp_customize) {
-
+function my_custom_menus() {
+    $locations = array(
+        'header_nav'   => __( 'Header Navigation'),
+        'footer_nav' => __('Footer Navigation'),
+    );
+    register_nav_menus( $locations );
 }
+
+// Hook them into the theme-'init' action
+add_action( 'init', 'my_custom_menus' );
+
 
 /* ----------------------------------- */
 // NAV CLASS
@@ -44,35 +49,6 @@ function active_nav_class ($classes, $item) {
 
 //register nav class
 add_filter('nav_menu_css_class' , 'active_nav_class' , 10 , 2);
-
-/* ----------------------------------- */
-// CUSTOM CONTACT FORM
-/* ----------------------------------- */
-add_action('wp_ajax_nopriv_process_contact_form', 'process_contact_form');
-add_action('wp_ajax_process_contact_form', 'process_contact_form');
-
-function process_contact_form()
-{
-    $to = "hello@kimco.dev";
-    $subject = 'Website Enquiry';
-    $headers[] = 'Content-Type: text/html; charset=UTF-8';
-    $headers[] = 'From: KIMCO Website <noreply@kimco.dev>';
-    $message = '<b>First Name:</b> '.$_POST["firstname"]."<br />";
-    $message = '<b>Last Name:</b> '.$_POST["lastname"]."<br />";
-    $message .= '<b>Email Address:</b> '.$_POST["email"]."<br />";
-    $message .= '<b>Contact Number:</b> '.$_POST["contact"]."<br />";
-    $message .= '<b>Company Name:</b> '.$_POST["company"]."<br />";
-    $message .= '<b>Website URL:</b> '.$_POST["website"]."<br />";
-    $message .= '<b>Message:</b><br />'.nl2br($_POST["message"]);
-    $attachments = "";
-    $sent = wp_mail($to, $subject, $message, $headers, $attachments);
-    if (!$sent) {
-        echo '<div class="form__error"><p>There was a problem submitting this form. Please re-complete and try again.</p></div>';
-    } else {
-        echo '<div class="form__success"><p>Message received, thank you.<br />We\'ll be in touch shortly.</p></div>';
-    }
-    wp_die();
-}
 
 //// Remove admin dashboard widgets.
 add_action('wp_dashboard_setup', function () {
@@ -117,7 +93,6 @@ add_filter('tiny_mce_before_init', 'override_MCE_options');
 add_action('init', function () {
     remove_action('wp_head', 'wp_print_scripts');
     remove_action('wp_head', 'wp_print_head_scripts', 9);
-    //add_action('wp_footer', 'prnt_emoji_detection_script', 5);
     add_action('wp_footer', 'wp_print_scripts', 5);
     add_action('wp_footer', 'wp_print_head_scripts', 5);
 });
@@ -150,3 +125,15 @@ function cc_mime_types($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+// Disable /users rest routes
+add_filter('rest_endpoints', function( $endpoints ) {
+    if ( isset( $endpoints['/wp/v2/users'] ) ) {
+        unset( $endpoints['/wp/v2/users'] );
+    }
+    if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+        unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+    }
+    return $endpoints;
+});
