@@ -9,6 +9,20 @@ dev environments
 - MAMP / WAMP 
 - NODE / NPM
 - Composer
+- ACF PRO 
+
+### IMPORTANT
+
+You need an ACF Pro licence to be able to use the flexible content field types in the default .php templates
+I have installed standard ACF for you with Composer - if you prefer not to purchase a licence for ACF Pro you can use the standard
+but will need to adapt page.php and index.php
+
+If you do purchase ACF pro, uninstall standard ACF from the plugins setup in WP once you are installed.
+
+If you fork this repo and want to have ACF pro installed via composer - these are the steps :
+
+https://www.advancedcustomfields.com/resources/installing-acf-pro-with-composer/
+
 
 ### How to Create a project from this repository
 
