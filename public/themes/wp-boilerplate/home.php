@@ -2,7 +2,7 @@
 get_header();
 ?>
 <main id="main-content">
-    <!-- include a here here if you need 0one -->
+    <!-- include a hero here if you need one -->
     <div class="container">
         <div class="container-inner">
             <div class="all-posts-wrapper all-posts">
@@ -28,15 +28,13 @@ get_header();
                                     <div class="news-posts-card-content">
                                         <div class="news-posts-card-summary"><?php the_excerpt(); ?> </div>
                                         <p class="news-posts-card-time">
-                                            <i class="fa-solid fa-calendar-days"></i>
                                             <span>
-                                           <?php echo get_post_time('d M Y'); ?>
-                                        </span>
+                                            <?php echo get_post_time('d M Y'); ?>
+                                            </span>
                                         </p>
                                         <?php $post_categories = wp_get_post_categories( $single_post_id, array( 'fields' => 'names' ) ); ?>
                                         <?php if( $post_categories ): // Always Check before loop! ?>
                                             <div class="news-posts-categories-wrapper">
-                                                <i class="fa-solid fa-tag" role="presentation" aria-hidden="true"></i>
                                                 <?php
                                                 foreach($post_categories as $name) : ?>
                                                     <span class="news-posts-card-category"><?php echo $name?></span>
@@ -48,7 +46,6 @@ get_header();
                                     <div  class="news-posts-card-content-cta">
                                         <a class="btn btn-quarternary" href="<?php the_permalink(); ?>">
                                             <span>Read more</span>
-                                            <i class="fa-light fa-arrow-right-long btn-icon"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -59,7 +56,7 @@ get_header();
                 </ul>
                 <?php printf(
                     '<div class="load-more-wrap mt-lg mb-lg" data-total-pages="%s"><button class="btn btn-tertiary load-more-posts" id="load_more_posts"><span class="load-more-btn-content">Load More Articles</span>
-                        <i class="fa-light fa-arrow-right-long btn-icon"></i></button></div>',
+                        </button></div>',
                     esc_attr( $wp_query->max_num_pages )
                 ); ?>
             </div>
