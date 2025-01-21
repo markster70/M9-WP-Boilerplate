@@ -102,13 +102,17 @@ They will be referenced in the css correctly via rollup / node aliases.
 
 - A base JS setup is in place for you to use - this has a DOM selector library, tools for debouncing, adding / removing / checking for classes
 
-- There are some commonly used scripts in thr ui-scripts folder
+- There are some commonly used scripts in the ui-scripts folder  
 
-Please take a look through the utility scripts directory and make use of those for consistency
+Please take a look through the utility scripts directory and make use of those for consistency.  
 
 If you need to write new JS, please add to the appropriate folder and create a module / function for
-each - we try to keep JS modular and with separation of concerns.
+each - we try to keep JS modular and with separation of concerns.  
+
 Functions can be run on either dom ready or load events - defer if not critical for dom ready
+
+- There is also a WP specific piece of JS for ajax loading of more posts / content - see loadMorePosts.js.  
+- The mark-up in home.php reflects this - if you change the markup in that php file, be sure to check the js dom selectors still operate.  
 
 ### Build Tool
 
@@ -138,11 +142,12 @@ pre-defined fields.
 
 There is a sample component named text-block added for your use, and well as some global acf field that I use to clone to other components
 You will need to sync the ACF fields once ACF pro is installed to get those.
+
 #### Note the use of the acf-json folder for better performance and version control of ACF work
 
 There are some sensible defaults in functions.php including nav menus, custom thumbnails and custom logo.
 
-We also remove a lot of the extra css WP adds for blocks / emojis etc.
+I also remove a lot of the extra css WP adds for blocks / emojis etc.
 
 SVG upload to media library is supported via a custom function. 
 
@@ -157,11 +162,11 @@ Wider partials can go in the partials folder
 
 ### Deployment 
 
-Please read our deployment guide on the Google Shared Drive - We tend to run a clean install on any prod
-servers then just upload our theme, uploads, plugins and mu-plugins. This has broader host support than trying to
-maintain our dev structure.
+Please read our deployment guide in this REPO - I tend to run a clean install on any prod
+servers then just upload  theme, uploads, plugins and mu-plugins. This has broader host support than trying to
+maintain the local dev structure.
 
-FE-Assets for deployment - we compile to a dist folder - anything in the static folder is added, as well as a css
+FE-Assets for deployment - I compile to a dist folder - anything in the static folder is added, as well as a css
 file and js file. 
 
 Updraft is a great migration / copying tool - BEST NOT TO MIGRATE OR INCLUDE THE THEME THOUGH - THATS UNDER
