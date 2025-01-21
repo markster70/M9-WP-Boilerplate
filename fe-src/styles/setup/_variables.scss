@@ -1,7 +1,6 @@
 // font vars
 
 $font-path : "@@staticAssetPath/fonts" !default;
-
 $image-path : "@@staticAssetPath/images" !default;
 
 // Spacing
@@ -32,8 +31,21 @@ $content-width-px : #{$content-width}px;
   --container-inner-padding: #{$spacer-lg};
   --container-padding-top: #{$spacer-xl};
   --container-padding-bottom: #{$spacer-xl};
-  --btn-border-radius: 30px;
+  --btn-border-radius: 1.5rem;
   --btn-outline-width: 3px;
+  --black : #{$black};
+  --white : #{$white};
+  --primary-colour : #{$primary-colour};
+  --secondary-colour : #{$secondary-colour};
+  --tertiary-colour : #{$tertiary-colour};
+}
+
+.is-dark-theme {
+  --black : #{$black};
+  --white : #{$white};
+  --primary-colour : #{$primary-colour};
+  --secondary-colour : #{$secondary-colour};
+  --tertiary-colour : #{$tertiary-colour};
 }
 
 

@@ -1,13 +1,28 @@
-$bp-mobile: 480px;
-$bp-tablet: 640px;
-$bp-laptop: 769px;
-$bp-desktop: 1025px;
-$bp-widescreen: 1200px;
-$bp-xxl : 1400px;
-$bp-massive: 1800px;
+//$bp-mobile: 480px;
+//$bp-tablet: 640px;
+//$bp-laptop: 769px;
+//$bp-desktop: 1025px;
+//$bp-widescreen: 1200px;
+//$bp-xxl : 1400px;
+//$bp-massive: 1800px;
 
-$mobile-max-width: 768px;
-$tablet-min-width: 440px;
-$laptop-min-width: 769px;
-$desktop-min-width: 1025px;
-$widescreen-min-width: 1200px;
+//$mobile-max-width: 768px;
+//$tablet-min-width: 440px;
+//$laptop-min-width: 769px;
+//$desktop-min-width: 1025px;
+//$widescreen-min-width: 1200px;
+
+
+$bp-massive: 1750;
+$bp-xxl: 1440;
+$bp-xl-max: 1279;
+$bp-xl: 1280;
+$bp-l-max: 959;
+$bp-l: 960;
+$bp-m-max: 768;
+$bp-m: 769;
+$bp-s-max: 639;
+$bp-s: 640;
+$bp-xs: 480;
+
+$bp-height-min: 900;

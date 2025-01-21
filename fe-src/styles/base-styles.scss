@@ -1,8 +1,10 @@
-@import 'setup/setup';
 @import 'tools/tools';
 @import "reset/reset";
 @import 'generic/generic';
+@import 'setup/setup';
 @import 'base/base';
 @import 'objects/objects';
-@import 'trumps/trumps';
+// Libs / third party
+@import 'tools/libs/aos';
 @import 'components/components';
+@import 'trumps/trumps';

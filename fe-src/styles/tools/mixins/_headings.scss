@@ -1,7 +1,0 @@
-@mixin headings {
-  @for $index from 1 through 6 {
-	  h#{$index} {
-       @content;
-    }
-  }
-}

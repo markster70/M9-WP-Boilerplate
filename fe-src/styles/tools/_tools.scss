@@ -1,13 +1,8 @@
-// Libs
-@import 'libs/aos';
-
 // Mixins
 @import 'mixins/borders';
 @import 'mixins/breakpoints';
-@import 'mixins/headings';
 @import 'mixins/links';
 
 // Custom functions
-@import 'functions/color';
 @import 'functions/tint-and-shade';
 @import "functions/font-clamp";

@@ -16,7 +16,7 @@
         "symfony/http-foundation": "^7.1",
         "vlucas/phpdotenv": "^5.6",
         "wpackagist-plugin/updraftplus": "^1.24.0",
-        "wpengine/advanced-custom-fields-pro" :  "^6.3",
+        "wpengine/advanced-custom-fields" :  "^6.3",
         "wpackagist-plugin/classic-editor": "^1.6.5"
     },
     "require-dev": {
@@ -33,7 +33,7 @@
         },
         {
             "type":"composer",
-            "url":"https://connect.advancedcustomfields.com"
+            "url":"https://composer.advancedcustomfields.com"
         }
     ],
     "minimum-stability": "stable",
@@ -59,7 +59,7 @@
             ],
             "public/plugins/{$name}": [
                 "type:wordpress-plugin",
-                "wpengine/advanced-custom-fields-pro",
+                "wpengine/advanced-custom-fields",
                 "type:wordpress-plugin",
                 "wpackagist-plugin/updraftplus",
                 "type:wordpress-plugin",

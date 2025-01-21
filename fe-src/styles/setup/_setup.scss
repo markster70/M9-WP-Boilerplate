@@ -1,7 +1,9 @@
 // Variables
+@import 'colors';
 @import "variables";
 @import 'typography';
-@import 'colors';
 @import 'breakpoints';
-@import 'global';
-@import "spacing-utliities";
+// Spacing utilities similar to frameworks like bootstrap can be implemented by uncommenting this line
+
+//@import "spacing-utliities";
+@import "general-utilities";

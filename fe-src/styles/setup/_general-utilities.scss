@@ -90,41 +90,40 @@
      display: none;
    }
 
-@include bp($bp-laptop) {
+@include breakpoint($bp-m) {
 //midi screen
-head {
-  font-size: 20px;
-  display: none;
-}
+  head {
+    font-size: 20px;
+    display: none;
+  }
 }
 
-@include bp($bp-desktop) {
+@include breakpoint($bp-l) {
 // large
-head {
-  font-size: 30px;
-  display: none;
-}
-}
-
-@include bp($bp-widescreen) {
-// xtra-large
-head {
-  font-size: 40px;
-  display: none;
-}
+  head {
+    font-size: 30px;
+    display: none;
+  }
 }
 
+@include breakpoint($bp-xl) {
+  // xtra-large
+  head {
+    font-size: 40px;
+    display: none;
+  }
+}
 
-// xtra-xtra-large
-@include bp($bp-xxl) {
+@include breakpoint($bp-xxl) {
+  // xtra-xtra-large
   head {
     font-size: 50px;
     display: none;
   }
 }
-//// Massive - adjust the min-width in media query as you wish
-// xtra-xtra-large
-@include bp($bp-massive) {
+
+@include breakpoint($bp-massive) {
+  //// Massive - adjust the min-width in media query as you wish
   head {
     font-size: 60px;
     display: none;

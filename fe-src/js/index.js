@@ -1,5 +1,5 @@
 // We import the 2 main stylesheets here for Vite
-import '../styles/kimco-base-styles.scss';
+import '../styles/base-styles.scss';
 
 
 // dependency imports
