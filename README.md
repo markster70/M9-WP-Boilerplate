@@ -13,7 +13,7 @@ dev environments
 
 ### IMPORTANT
 
-You need an ACF Pro licence to be able to use the flexible content field types in the default .php templates
+You need an ACF Pro licence to be able to use the flexible content field types in the default .php templates.  
 I have installed standard ACF for you with Composer - if you prefer not to purchase a licence for ACF Pro you can use the standard
 but will need to adapt page.php and index.php
 
@@ -89,8 +89,7 @@ minimising conflicts in multi developer teams.
 - Setup your variables in _variables.scss - recommend to use css vars, or scss vars then interpolated into css vars
 - Take a look at the heading font sizes in the typography partial
 - Take a moment to look at the mixins and functions available - use them as you wish, or add others
-- Take a look at the pre-defined spacing vars - choose whether to include that partial
-- -
+- Take a look at the pre-defined spacing vars - choose whether to include that partial  
 
 ### Static Assets
 
@@ -98,21 +97,22 @@ Fonts and Static Images can be added in /fe-src/static.
 
 They will be referenced in the css correctly via rollup / node aliases.
 
+You will need to run npm run build to get static assets across into build folder.  
+
 ### JS Setup
 
-- A base JS setup is in place for you to use - this has a DOM selector library, tools for debouncing, adding / removing / checking for classes
+- A base JS setup is in place for you to use - this has a DOM selector library, tools for debouncing, adding / removing / checking for classes.  
 
 - There are some commonly used scripts in the ui-scripts folder  
 
-Please take a look through the utility scripts directory and make use of those for consistency.  
+- Please take a look through the utility scripts directory and make use of those for consistency.  
 
-If you need to write new JS, please add to the appropriate folder and create a module / function for
-each - we try to keep JS modular and with separation of concerns.  
+- If you need to write new JS, suggest add to the appropriate folder and create a module / function for
+each - I try to keep JS modular and with separation of concerns.  
 
-Functions can be run on either dom ready or load events - defer if not critical for dom ready
+- Functions can be run on either dom ready or load events - defer if not critical for dom ready.  
 
-- There is also a WP specific piece of JS for ajax loading of more posts / content - see loadMorePosts.js.  
-- The mark-up in home.php reflects this - if you change the markup in that php file, be sure to check the js dom selectors still operate.  
+- There is also a WP specific piece of JS for ajax loading of more posts / content - see loadMorePosts.js. The mark-up in home.php reflects this - if you change the markup in that php file, be sure to check the js dom selectors still operate.  
 
 ### Build Tool
 
@@ -121,7 +121,6 @@ to be changed.
 
 HMR is working for F-E code and any PHP changes you make.
 
-You will need to run npm run build to get static assets across into build folder.
 
 ### Wordpress Specifics
 
@@ -133,17 +132,18 @@ The following are installed as plugins :
 - Classic Editor
 - Updraft Plus ( for cloning  / WP instance copying)
 
-### Activate the plugins after install
+#### Activate the plugins after install
 
 You will need to add a licence key for ACF Pro if you wish to have pro features within the plugin after install.
 
-Flexible content blocks are generally what we use for projects. We have left this repo as un-opinionated as possible for 
-pre-defined fields.
+Flexible content blocks are generally what I use for projects. I have left this repo as un-opinionated as possible in terms of content.  
 
 There is a sample component named text-block added for your use, and well as some global acf field that I use to clone to other components
 You will need to sync the ACF fields once ACF pro is installed to get those.
 
 #### Note the use of the acf-json folder for better performance and version control of ACF work
+
+##### Functions.php
 
 There are some sensible defaults in functions.php including nav menus, custom thumbnails and custom logo.
 
@@ -157,12 +157,12 @@ colours for text. Adjust the $custom_colors var to suit the theme you are workin
 
 ### Theme Conventions
 
-Put any components partials in the components folder
-Wider partials can go in the partials folder
+I place components partials in the components folder.  
+Static partials are placed in the partials folder.  
 
 ### Deployment 
 
-Please read our deployment guide in this REPO - I tend to run a clean install on any prod
+Please read the deployment guide in this REPO - I tend to run a clean install on any prod
 servers then just upload  theme, uploads, plugins and mu-plugins. This has broader host support than trying to
 maintain the local dev structure.
 
