@@ -5,21 +5,16 @@ dotenv.config();
 const localDevPath = process.env.WP_LOCAL_DEV_PATH;
 const themeName = process.env.WP_DEFAULT_THEME;
 
-// http://localhost:3000 is serving Vite on development
+// http://localhost:3000 is serving Vite for development
 // but accessing it directly will be empty
 
-// IMPORTANT image urls in CSS works fine
-// BUT you need to create a symlink on dev server to map this folder during dev:
-// ln -s {path_to_vite}/src/assets {path_to_public_html}/assets
-// on production everything will work just fine
 
-//import vue from '@vitejs/plugin-vue'
 import liveReload from 'vite-plugin-live-reload';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-// vite.config.js
-import vue from '@vitejs/plugin-vue'
+// uncomment this if you need Vue.js
+// import vue from '@vitejs/plugin-vue'
 
 
 const serverRoot = path.resolve(__dirname);
@@ -30,7 +25,10 @@ export default defineConfig(({ command, mode }) => {
     root: '',
     base: process.env.NODE_ENV === 'development' ? `` : `/wp-content/themes/${themeName}/dist/`,
     publicDir: 'fe-src/static',
-    plugins:[liveReload([__dirname + '/**/*.php'], vue())],
+    plugins:[liveReload([__dirname + '/**/*.php'],
+      // uncomment this if you need Vue.js
+      //  vue()
+    )],
     build: {
       assetsDir: '',
       emptyOutDir: true,
@@ -79,7 +77,6 @@ export default defineConfig(({ command, mode }) => {
       //  key: fs.readFileSync('localhost-key.pem'),
       //  cert: fs.readFileSync('localhost.pem'),
       //},
-
       hmr: {
         host: 'localhost',
         protocol: 'ws',

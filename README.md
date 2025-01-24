@@ -35,7 +35,15 @@ Once you have created a new repo, you can then clone the new repo down to your m
 ## Setup Guidance
 
 - run 'composer install at the root in terminal'
-- run 'npm install at the root in terminal'
+- run 'npm install at the root in terminal' - suggest you check package.json prior to ensure in has the f-e pre-requisites you need  
+
+I include :
+
+Vue - need to uncomment the vue-plugin for vite in vite.config - see the comments
+GSAP - Used for Animation
+AOS - Also used for animation - may want either gsap or aos
+Splide - Great carousel
+
 - Create an empty database in phpmyadmin via MAMP / WAMP - Use 'utf8mb4_unicode_ci' as the encoding
 - Add a user for that database with full privileges to the newly created database. Use strong passwords.
 - Set up your local dev site in MAMP / WAMP - the root directory needs to be the 'public' directory of this repo
@@ -90,10 +98,18 @@ minimising conflicts in multi developer teams.
 - Take a look at the heading font sizes in the typography partial
 - Take a moment to look at the mixins and functions available - use them as you wish, or add others
 - Take a look at the pre-defined spacing vars - choose whether to include that partial  
+- Take a look at these variables - I set them to allow for font's / bg images to run in both dev and prod  
+
+Note the use of the @@staticAssetPath alias - this comes from vite.config.js
+
+`$font-path : "@@staticAssetPath/fonts" !default;`
+`$image-path : "@@staticAssetPath/images" !default;`
 
 ### Static Assets
 
 Fonts and Static Images can be added in /fe-src/static.
+
+Fonts wise - Google's Montserrat is already included, but replace as you wish..
 
 They will be referenced in the css correctly via rollup / node aliases.
 

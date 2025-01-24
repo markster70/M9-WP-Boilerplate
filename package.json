@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "wp-boilerplate",
+  "name": "m9-wp-boilerplate",
   "version": "1.0.0",
   "description": "WP Boilerplate M9 Digital",
   "main": "index.js",
