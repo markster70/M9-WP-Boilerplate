@@ -188,6 +188,29 @@ file and js file.
 Updraft is a great migration / copying tool - BEST NOT TO MIGRATE OR INCLUDE THE THEME THOUGH - THATS UNDER
 SOURCE CONTROL IN YOUR REPO. 
 
+
+### CREDITS :
+
+Thank you to these clever people who do that vast majorty of the hard work here..  
+
+- [`composer/installers`](https://github.com/composer/installers)
+- [`motdotla/dotenv`](https://github.com/motdotla/dotenv)
+- [`outlandish/wpackagist`](https://github.com/outlandishideas/wpackagist)
+- [`roots/bedrock-autoloader`](https://github.com/roots/bedrock-autoloader)
+- [`roots/wordpress`](https://github.com/roots/wordpress)
+- [`roots/wp-password-bcrypt`](https://github.com/roots/wp-password-bcrypt)
+- [`symfony/http-foundation`](https://github.com/symfony/http-foundation)
+- [`symfony/var-dumper`](https://github.com/symfony/var-dumper)
+- [`upperdog/clean-image-filenames`](https://github.com/upperdog/clean-image-filenames)
+- [`vinkla/headache`](https://github.com/vinkla/headache)
+- [`vitejs/vite`](https://github.com/vitejs/vite)
+- [`vlucas/phpdotenv`](https://github.com/vlucas/phpdotenv)
+- [`vinkla/wordplate`](https://github.com/vinkla/wordplate)
+
+### LICENCE :  
+
+https://opensource.org/license/MIT
+
 ## THAT'S THE LOT - HAPPY BUILDING!
 
 
