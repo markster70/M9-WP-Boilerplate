@@ -53,7 +53,7 @@ add_filter('nav_menu_css_class' , 'active_nav_class' , 10 , 2);
 //// Remove admin dashboard widgets.
 add_action('wp_dashboard_setup', function () {
     remove_meta_box('dashboard_activity', 'dashboard', 'normal'); // Activity
-    // remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // At a Glance
+    remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // At a Glance
     remove_meta_box('dashboard_site_health', 'dashboard', 'normal'); // Site Health Status
     remove_meta_box('dashboard_primary', 'dashboard', 'side'); // WordPress Events and News
     remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // Quick Draft
@@ -100,6 +100,7 @@ add_action('init', function () {
 // REMOVING SUPERFLUOUS SCRIPTS AND CSS HERE
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+
 add_action( 'wp_enqueue_scripts', function() {
     wp_dequeue_style( 'classic-theme-styles' );
 }, 20 );
